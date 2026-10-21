@@ -1,30 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <title>BigFridge Studios</title>
-    <meta name="description" content="A class-less example, without dependencies.">
+    <meta name="description" content="BigFridge Studios is an indie game studio based out of Washington, USA.">
 
     <!-- Pico.css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css"
-    >
-  </head>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
 
-  <body>
-    <!-- Header -->
+    <style>
+        /* Responsive 16:9 trailer embed */
+        .video-wrap {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            margin-bottom: var(--pico-typography-spacing-vertical);
+        }
+
+            .video-wrap iframe {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+                border-radius: var(--pico-border-radius);
+            }
+
+        /* Screenshot gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: var(--pico-typography-spacing-vertical);
+        }
+
+            .gallery figure {
+                margin: 0;
+            }
+
+            .gallery img {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: var(--pico-border-radius);
+            }
+    </style>
+</head>
+
+<body>
+    <!-- Header / About the studio -->
     <header>
-      <hgroup>
-        <h1>BigFridge Studios</h1>
-        <p>An indie development studio based out of Washington, USA.</p>
-      </hgroup>
+        <hgroup>
+            <h1>BigFridge Studios</h1>
+            <p>An indie game studio based out of Washington, USA.</p>
+        </hgroup>
     </header>
     <!-- ./ Header -->
 
+    <main>
+        <!-- Game section -->
+        <section id="game">
+            <h2>Autopelago</h2>
+
+            <!-- Trailer -->
+            <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/oFdcF05cv4s"
+                        title="Autopelago Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        loading="lazy"></iframe>
+            </div>
+
+            <!-- Screenshots -->
+            <div class="gallery">
+                <figure>
+                    <img src="img/screenshot_1.png" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="img/screenshot_2.png" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="img/screenshot_3.png" loading="lazy">
+                </figure>
+            </div>
+
+            <div class="gallery">
+                <figure>
+                    <img src="img/screenshot_4.png" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="img/screenshot_5.png" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="img/screenshot_6.png" loading="lazy">
+                </figure>
+            </div>
+
+            <!-- Description -->
+            <p>
+                Autopelago is a game where you automate gathering and crafting to help explore the floating islands you find yourself stuck at. Call upon the friendly wisps of the region to help find your way home.
+            </p>
+            <p>
+                <strong>Platforms:</strong> Steam<br>
+                <strong>Release Date:</strong> Coming Soon!
+            </p>    
+            <!-- <a href="#" role="button">Wishlist on Steam</a> -->
+        </section>
+    </main>
+
+    <!-- Contact -->
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>
+            Want to reach out? Email us at:
+            <a href="mailto:bigfridgegamestudios@gmail.com">bigfridgegamestudios@gmail.com</a>
+        </p>
+        <p>
+            <a href="https://x.com/BigFridgeGames">X</a> ·
+            <a href="https://discord.gg/tUtet3DQeC">Discord</a> ·
+            <a href="https://www.youtube.com/@BigFridgeStudios">YouTube</a>
+        </p>
+        <small>&copy; 2026 BigFridge Studios</small>
+    </footer>
+    <!-- ./ Contact -->
     <!-- Minimal theme switcher -->
     <script src="js/minimal-theme-switcher.js"></script>
-  </body>
+</body>
 </html>
